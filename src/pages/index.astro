@@ -7,10 +7,10 @@ const description =
 ---
 
 <Layout title="League Software Inc." description={description}>
-	<main>
+	<main class="p-5">
 		<section
 			title="League Software Inc."
-			class="p-5 my-16 lg:my-30 xl:my-40 justify-center flex-wrap-reverse flex flex-row"
+			class="my-16 lg:my-30 xl:my-40 justify-center flex-wrap-reverse flex flex-row"
 		>
 			<article
 				class="my-10 lg:my-2 lg:p-20 justify-center flex flex-col gap-10 w-full sm:w-4/6 md:w-5/6 xl:w-3/6 text-center lg:text-start text-dark"
@@ -36,13 +36,55 @@ const description =
 				alt="Agency employees planning a project"
 			/>
 		</section>
-		<section class="flex text-dark w-full flex-col text-center">
+		<section
+			class="flex md:px-2 text-dark w-full flex-col text-center max-w-5xl mx-auto"
+		>
 			<article class="flex flex-col gap-2">
-				<h2 class="font-extrabold lg:text-4xl">What We Do</h2>
-				<h3 class="w-2/4 mx-auto">
+				<h2 class="font-extrabold text-3xl lg:text-4xl">What We Do</h2>
+				<p class="w-3/4 xl:w-2/6 mx-auto">
 					We tackle your web design and development challenges so you can get
 					more business.
-				</h3>
+				</p>
+			</article>
+			<article
+				class="my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:text-left mx-auto"
+			>
+				<Card
+					alt="Web Development"
+					svgPath="/html.svg"
+					title="Web Development"
+					description="We make attractive, easy-to-use websites that help your business grow. We aim to make your website a favorite place for your customers."
+				/>
+				<Card
+					alt="Fully Responsive"
+					svgPath="/computer.svg"
+					title="Fully Responsive"
+					description="Our team creates beautiful, user-friendly designs that engage visitors. We make sure your website looks great everywhere from mobile to desktop screens."
+				/>
+				<Card
+					alt="On Page SEO"
+					svgPath="/seo.svg"
+					title="On Page SEO"
+					description="We boost your website's visibility on search engines. By improving your site's titles, content, and navigation, we make it easier for people to find you."
+				/>
+				<Card
+					alt="Handwritten Code"
+					svgPath="/fingerprint.svg"
+					title="Handwritten Code"
+					description="Clean code and proper website semantics are prioritized to ensure that your site’s content is search friendly and easily discoverable by your target audience."
+				/>
+				<Card
+					alt="Accessible"
+					svgPath="/accessibility.svg"
+					title="Accessible"
+					description="We deliver robust experiences that account for persons with disabilities, ensuring that your content is accessible to all."
+				/>
+				<Card
+					alt="Performant"
+					svgPath="/clock.svg"
+					title="Performant"
+					description="We prioritize optimizing website performance to help you provide a successful online experience and increase your customer base."
+				/>
 			</article>
 		</section>
 	</main>
