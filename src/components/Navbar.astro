@@ -11,7 +11,7 @@
       />
     </a>
     <button
-      aria-label="Toggle navigation"
+      aria-label="Open/Close Navigation Button"
       class="md:hidden w-10"
       data-collapse-toggle="navbar-default"
       aria-controls="navbar-default"
@@ -20,24 +20,28 @@
     >
       <!-- default hamburger -->
       <svg
+        aria-labelledby="open-hamburger"
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
+        <title id="open-hamburger">Open hamburger menu for mobile</title>
         <path stroke-linecap="round" stroke-width={2} d="M4 8h16M4 16h16"
         ></path>
       </svg>
 
       <!-- close button -->
       <svg
+        aria-labelledby="close-hamburger"
         class="hidden"
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
+        <title id="close-hamburger">Close hamburger menu for mobile</title>
         <path
           fill="evenodd"
           d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -46,20 +50,22 @@
     </button>
   </div>
   <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-    <ul class="flex flex-col pl-8 md:pl-0 md:flex-row gap-5 lg:gap-10 visible">
-      <li>
+    <ul
+      class="flex flex-col align px-8 md:pl-0 md:flex-row gap-5 lg:gap-10 visible"
+    >
+      <li class="self-end">
         <a href="/home">Home</a>
       </li>
-      <li>
+      <li class="self-end">
         <a href="/about">About</a>
       </li>
-      <li>
+      <li class="self-end">
         <a href="/services">Services</a>
       </li>
-      <li>
+      <li class="self-end">
         <a href="/portfolio">Portfolio</a>
       </li>
-      <li>
+      <li class="self-end">
         <a href="/contact">Contact</a>
       </li>
     </ul>
