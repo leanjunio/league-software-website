@@ -189,7 +189,16 @@ const description =
 				>
 					Get In Touch
 				</h3>
-				<form class="flex flex-col gap-3 lg:gap-5" action="">
+				<form
+					action="https://api.web3forms.com/submit"
+					class="flex flex-col gap-3 lg:gap-5"
+					method="POST"
+				>
+					<input
+						type="hidden"
+						name="access_key"
+						value="378b9ad2-6e72-4884-8e5e-c14df3db2654"
+					/>
 					<div>
 						<label for="name">Name</label>
 						<input
@@ -225,7 +234,9 @@ const description =
 							id="message"></textarea>
 					</div>
 					<div>
-						<button class="w-full lg:w-fit py-3 px-8 bg-dark text-white"
+						<button
+							type="submit"
+							class="w-full lg:w-fit py-3 px-8 bg-dark text-white"
 							>Send Message</button
 						>
 					</div>
