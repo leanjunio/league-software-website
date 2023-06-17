@@ -1,39 +1,52 @@
-<nav class="flex items-center justify-between px-4">
-  <a href="/">
-    <img
-      width="80"
-      height="80"
-      src="league-logo.svg"
-      alt="League Software inc. logo"
-    />
-  </a>
-  <button
-    class="md:hidden w-10"
-    data-collapse-toggle="navbar-default"
-    aria-controls="navbar-default"
-    aria-expanded="false"
-  >
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+<nav
+  class="flex flex-col md:flex-row items-stretch md:items-center justify-between px-4"
+>
+  <div class="flex flex-row items-center justify-between px-4">
+    <a href="/">
+      <img
+        width="80"
+        height="80"
+        src="league-logo.svg"
+        alt="League Software inc. logo"
+      />
+    </a>
+    <button
+      aria-label="Toggle navigation"
+      class="md:hidden w-10"
+      data-collapse-toggle="navbar-default"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+      id="nav-toggle"
     >
-      <title>Mobile Navigation Menu</title>
-      <path
-        d="M1 12C1 11.4477 1.44772 11 2 11H22C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13H2C1.44772 13 1 12.5523 1 12Z"
-        fill="#0F0F0F"></path>
-      <path
-        d="M1 4C1 3.44772 1.44772 3 2 3H22C22.5523 3 23 3.44772 23 4C23 4.55228 22.5523 5 22 5H2C1.44772 5 1 4.55228 1 4Z"
-        fill="#0F0F0F"></path>
-      <path
-        d="M1 20C1 19.4477 1.44772 19 2 19H22C22.5523 19 23 19.4477 23 20C23 20.5523 22.5523 21 22 21H2C1.44772 21 1 20.5523 1 20Z"
-        fill="#0F0F0F"></path>
-    </svg>
-  </button>
+      <!-- default hamburger -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-width={2} d="M4 8h16M4 16h16"
+        ></path>
+      </svg>
+
+      <!-- close button -->
+      <svg
+        class="hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip="evenodd"></path>
+      </svg>
+    </button>
+  </div>
   <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-    <ul class="flex flex-row gap-10 visible">
+    <ul class="flex flex-col pl-8 md:pl-0 md:flex-row gap-5 lg:gap-10 visible">
       <li>
         <a href="/home">Home</a>
       </li>
@@ -52,3 +65,17 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const menuToggle = document.querySelector("#nav-toggle");
+    const navbar: HTMLElement | null =
+      document.querySelector("#navbar-default");
+
+    if (menuToggle && navbar) {
+      menuToggle.addEventListener("click", (event) => {
+        navbar.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
