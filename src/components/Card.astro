@@ -9,12 +9,8 @@ export interface Props {
 const { title, description, svgPath, alt } = Astro.props;
 ---
 
-<div
-	class="h-full p-5 flex flex-col items-start gap-6 text-center lg:text-start"
->
-	<div
-		class="bg-skyblue h-fit w-fit p-4 place-self-center lg:place-self-start rounded-full flex"
-	>
+<div class="h-full p-5 flex flex-col items-start gap-6 text-center">
+	<div class="bg-skyblue h-fit w-fit p-4 place-self-center rounded-full flex">
 		<img class="h-5 w-5" height="25" width="25" alt={alt} src={svgPath} />
 	</div>
 	<h3 class="font-bold text-xl w-full">{title}</h3>
